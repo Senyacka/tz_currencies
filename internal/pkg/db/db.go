@@ -122,10 +122,10 @@ func DbGetLastCurrencies(t int) []byte {
 
 func Cron() {
 	for {
-		time.Sleep(time.Hour * 12)
 		DbGetLastCurrencies(1)
 		DbGetLastCurrencies(2)
 		DbGetLastCurrencies(3)
 		DbGetLastCurrencies(4)
+		time.Sleep(time.Hour * 12)
 	}
 }
